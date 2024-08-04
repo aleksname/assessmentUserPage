@@ -1,0 +1,135 @@
+
+.container{
+    background-image: url('../../public/MainPage/bgMainPage.png');
+    background-size: 100%;
+    height: 1000px;
+}
+.headerBlock {
+  max-width: 1200px;
+  @apply mx-auto p-5 text-xl text-slate-800;
+}
+
+.headerBlockNav {
+  max-width: 1280px;
+  @apply flex justify-between;
+}
+
+.header {
+  @apply flex items-center;
+}
+
+.headerTitle {
+  @apply mr-2;
+}
+
+.burgerButton {
+  margin-left: auto;
+}
+
+.headerLogoImg{
+    width: 35px;
+    height: 34px;
+}
+.headerUl{
+    @apply flex
+}
+.headerLink{
+    @apply mr-5
+}
+.headerUl li:last-child .headerLink{
+  @apply mr-0
+}
+
+// ------------homePageBlock---------------
+.homePageBlock{
+    max-width: 1230px;
+    @apply px-5 mx-auto
+}
+.homePageImg{
+    @apply flex justify-center;
+}
+.pageImg{
+    background-repeat: no-repeat;
+    background-position: center;
+    @apply  shadow-2xl
+}
+.homePageLearnBlock{
+    background-color: #FFD18B;
+    @apply p-5  rounded-xl shadow-2xl 
+}
+.learnHeadBlock{
+    @apply flex justify-between items-center mb-5 border-b-4 pb-3
+}
+.headCoinBlock{
+    @apply flex text-xl 
+}
+.headCoin{
+    @apply mr-2;
+    width: 30px;
+    height: 30px;
+}   
+
+.headUserNameBlock{
+    @apply text-2xl font-bold flex
+}
+.headUserName{
+    @apply flex
+}
+.headUserNameImg{
+    @apply mr-3
+}
+.userSubTitle{
+    @apply font-mono text-xl justify-end flex
+}
+.userIcon{
+    width: 75px;
+    height: 70px;
+    align-items: center;
+}
+
+// 
+.homeTitle{
+    @apply text-4xl font-medium mb-2
+}
+.homeSubTitle{
+    color: #00000098;
+    @apply text-xl mb-12
+}
+
+// 
+.learnLinkBlock {
+    @apply flex justify-around mb-16;
+}
+.linkBlock {
+    @apply relative drop-shadow-2xl 
+}
+
+@media (max-width: 800px) {
+    .linkBlockImg {
+        width: 250px;
+        border-radius: 25px;
+    }
+}
+
+.linkBlockImg {
+    width: 300px;
+    border-radius: 25px
+}
+.linkExcersise {
+    @apply absolute bottom-5 right-5 text-3xl font-medium text-gray-500 rounded-2xl  ;
+    background-color: #ffd18bd1;
+    padding: 5px;
+}
+// 
+
+.recomendedBlock{
+    background-color: aquamarine;
+    @apply rounded-xl p-5 flex items-center
+}
+.recomendedIcon{
+    width: 75px;
+    margin-right: 50px;
+}
+.recomendedTitle{
+    @apply text-2xl text-black font-medium
+}

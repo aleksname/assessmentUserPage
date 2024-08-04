@@ -1,0 +1,55 @@
+# Node modules
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build output
+build/
+dist/
+.next/
+.out/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# IDEs and editors
+.idea/
+.vscode/
+.sublime-project
+.sublime-workspace
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Cache files
+.cache/
+.next/cache/
+.yarn/cache/
+.pnp/
+.pnp.js
+
+# Create React App
+*.css.map
+*.js.map
+
+# Yarn
+yarn-error.log
+
+# Jest
+jest.config.js
+jest.setup.js
