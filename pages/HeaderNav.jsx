@@ -7,6 +7,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import styles from './styles/style.module.scss';
 import Image from 'next/image';
 import Logo from '../public/logo/favicon.png';
+import Link from 'next/link';
 
 export default function () {
   const [state, setState] = React.useState({
@@ -38,10 +39,10 @@ export default function () {
   return (
     <>
       <div className={styles.headerBlockNav}>
-        <div className={styles.header}>
+        <Link href='/' className={styles.header}>
           <h1 className={styles.headerTitle}>ReflexEd</h1>
           <Image src={Logo} alt={Logo} className={styles.headerLogoImg} />
-        </div>
+        </Link>
         <nav>
           <div>
             {[ 'right'].map((anchor) => (
