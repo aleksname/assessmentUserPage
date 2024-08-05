@@ -9,9 +9,10 @@ import Link from "next/link";
 import RecomendedIcon from '../public/MainPage/recomendedIcon.png'
 
 export default function Main() {
-  return (
+  return ( 
     <>
-      <MainContainer titels={"Home Page"} className={styles.container} >
+      <MainContainer titels={"Home Page"} >
+        <div className={styles.wrapper}>
         <div className={styles.homePageBlock}>
           <div className={styles.homePageImg}>
             <Image src={MainPageTop} alt="Main Page Top Image" className={styles.pageImg} />
@@ -19,7 +20,7 @@ export default function Main() {
           <div className={styles.homePageLearnBlock}>
             <LearnHeadBlock />
             <div className={styles.homeTitle}>Ready to learn?</div>
-            <h1 className={styles.homeSubTitle}>Continue where you left off</h1>
+            <div className={styles.homeSubTitle}>Continue where you left off</div>
             <div className={styles.learnLinkBlock}>
               <Link href="#" className={styles.linkBlock}>
               <Image src={learnIcon1} alt={learnIcon1} className={styles.linkBlockImg} />
@@ -32,10 +33,11 @@ export default function Main() {
             </div>
             <div className={styles.homeTitle}>Recommended</div>
             <Link href='#' className={styles.recomendedBlock}>
-              <Image src={RecomendedIcon} className={styles.recomendedIcon} />
+                <Image src={RecomendedIcon} className={styles.recomendedIcon} alt={ RecomendedIcon} />
               <div className={styles.recomendedTitle}>Circle radius and diameter</div>
             </Link>
           </div>
+        </div>
         </div>
       </MainContainer>
     </>
