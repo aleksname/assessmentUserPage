@@ -26,7 +26,7 @@ export default function Main() {
               <Image src={learnIcon1} alt={learnIcon1} className={styles.linkBlockImg} />
                 <div className={styles.linkExcersise}>Excersise</div>
               </Link>
-              <Link href="#" className={styles.linkBlock}>
+                <Link href="/quiz" className={styles.linkBlock}>
                 <Image src={learnIcon2} alt={learnIcon1} className={styles.linkBlockImg} />
                 <div className={styles.linkExcersise}>Quiz</div>
               </Link>
