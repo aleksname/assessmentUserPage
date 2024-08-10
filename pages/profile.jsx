@@ -35,7 +35,7 @@ export default function profile() {
                             <div className={styles.contactusername}>Email: test@gmail.com</div>
                         </div>
                     </div>
-                    <Link href='#'>
+                    <Link href='/feedback'>
                     <div className={styles.profileOtherBlock}>
                         <Image src={InformationIcon} alt={InformationIcon} className={ styles.informationIcon} />
                         <div className={styles.profileOtherInfo}>Help and Feedback</div>
