@@ -9,6 +9,8 @@ import Image from 'next/image';
 import Logo from '../public/logo/favicon.png';
 import Link from 'next/link';
 
+import homeIcon from '../public/headerIcon/homeIcon.svg' 
+
 export default function () {
   const [state, setState] = React.useState({
     right: false,
@@ -29,9 +31,24 @@ export default function () {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <div className="">Title</div>
+      <div className={styles.headerHomeTitle}>ReflexEd</div>
       <List>
-        x
+        <div className={styles.headerHomeIcon}>
+          <Link href={'/'} className={styles.headerHomelink}>HOME</Link>
+        </div>
+        <div className="">
+          <Link href={'/profile'} className={styles.headerUserlink}>USER PROFILE</Link>
+        </div>
+        <div className="">
+          <Link href={'/excersise'} className={styles.headerExerciseLink}>EXCERCISE</Link>
+        </div>
+        <div className="">
+          <Link href={'/quiz'} className={styles.headerQuizLick}>QUIZ</Link>
+        </div>
+        <div className="">
+          <Link href={'/feedback'} className={styles.headerHelp}>Feedback form</Link>
+        </div>
+        {/* <Link href={'/'} className={styles.}>QUIZ</Link> */}
       </List>
     </Box>
   );
