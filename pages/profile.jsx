@@ -1,43 +1,59 @@
-import React from 'react'
+import * as React from 'react';
 import MainContainer from './MainContainer'
 import styles from './styles/style.module.scss'
-import  Image  from 'next/image';
-import UserIcon from '../public/MainPage/UserIcon.png'
-import UserIcons from '../public/profile/userIcons.svg'
-import PhoneIcons from '../public/profile/Phone_fill.svg'
-import MailIcons from '../public/profile/MailIcons.svg'
+import Image  from 'next/image';
 import InformationIcon from '../public/profile/informationIcon.svg'
 import Link from 'next/link';
 
+import profileIcon2 from '../public/profile/profileIcon2.svg'
+import ChestIcon from '../public/profile/ChestIcon.svg'
+
+import { styled } from '@mui/material/styles';
+import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
+import TabsComponentProfile from './TabsComponentProfile';
+import Diagrama from './Diagrama';
+
+
 export default function profile() {
+
+    const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
+        height: 15,
+        borderRadius: 5,
+        [`&.${linearProgressClasses.colorPrimary}`]: {
+            backgroundColor: theme.palette.grey[theme.palette.mode === 'light' ? 200 : 800],
+        },
+        [`& .${linearProgressClasses.bar}`]: {
+            borderRadius: 5,
+             backgroundColor:   '#9ACD32',
+        },
+    }));
+    
     return (
     <MainContainer titels={'Profile page'}>
             <div className={styles.wrapper}>
                 <div className={styles.profilePageBlock}>
-                    <div className={styles.profileInfoBlock}>
-                        <Image src={UserIcon} alt={UserIcon} className={ styles.userProfileIcon} />
+                    <div className={styles.profilePageTitleBlock}>
+                        <div className={styles.profileTitle}>August 10, Saturday</div>
                     </div>
-                    <div className={styles.profileInfoFullName}>Amina Melentieva</div>
-                    <div className={styles.profileSetInfoBlock}>
-                        <div className={styles.setInfoTitle}>PROFILE</div>
-                        <div className={styles.infoContactBlock}>
-                            <Image src={UserIcons} alt={UserIcons} className={ styles.contactIcon} />
-                            <div className={styles.contactusername}>Username: Amina Melentieva</div>
-                        </div>
-
-                        <div className={styles.infoContactBlock}>
-                            <Image src={PhoneIcons} alt={PhoneIcons} className={ styles.contactIcon} />
-                            <div className={styles.contactusername}>Contact: +38 00 00 00 000</div>
-                        </div>
-
-                        <div className={styles.infoContactBlock}>
-                            <Image src={MailIcons} alt={MailIcons} className={ styles.contactIcon} />
-                            <div className={styles.contactusername}>Email: test@gmail.com</div>
+                    <div className={styles.profileStatsinfo}>
+                        <Image src={profileIcon2} alt='profileIcon2' className={styles.profileIcon} />
+                        <div className="">
+                            <div className={styles.profileStatTitle}>You’re almost there!</div>
+                            <div className={styles.profileStatSubTitle}>Steps left to defeat ⚔️</div>
+                            <div className={styles.profileStatSubTitle2}>1.688</div>
                         </div>
                     </div>
+                    <div className={styles.profileProgresLineBlock}>
+                        <BorderLinearProgress variant="determinate" value={80} />
+                        <Image src={ChestIcon} alt='ChestIcon'/>
+                    </div>
+                    <div className={styles.profileStatSubTitle}>8,312 steps done</div>
+                    <div className={styles.profileMetrikaTitle}>Your Steps Progress</div>
+                    <TabsComponentProfile />
+                    <Diagrama/>
                     <Link href='/feedback'>
                     <div className={styles.profileOtherBlock}>
-                        <Image src={InformationIcon} alt={InformationIcon} className={ styles.informationIcon} />
+                        <Image src={InformationIcon} alt={"InformationIcon"} className={ styles.informationIcon} />
                         <div className={styles.profileOtherInfo}>Help and Feedback</div>
                     </div>
                     </Link>
@@ -46,3 +62,7 @@ export default function profile() {
     </MainContainer>
     )
 }
+
+
+
+

@@ -165,35 +165,48 @@
 
 .profilePageBlock{
     max-width: 1200px;
-    @apply mx-auto px-5
+    @apply mx-auto px-5 bg-slate-200 rounded-xl
 }
-.profileInfoBlock{
-    @apply flex justify-center pt-10;
+
+.profilePageTitleBlock{
 }
-.userProfileIcon{
-    margin-bottom: 10px;
+.profileTitle{
+    @apply text-slate-600 pt-2  text-xl font-medium bg-slate-200;
+    border-bottom: #cecece solid 2px;
 }
-.profileInfoFullName{
-    @apply flex justify-center text-2xl font-medium mb-10
+.profileStatsinfo{
+    @apply flex justify-center mt-10
 }
-.setInfoTitle{
-    @apply text-black text-2xl font-medium mb-10 border-b-2 border-black;
+.profileIcon{
+    @apply mr-10 mb-5 ;
 }
-.infoContactBlock{
-    @apply bg-blue-100 flex mb-10 rounded-2xl py-2 px-5 items-center
+.profileStatTitle{
+    @apply text-2xl font-medium mb-12
 }
-.contactIcon{
-    width: 55px;
-    margin-right: 10px;
+.profileStatSubTitle{
+    @apply text-xl text-slate-600
 }
-.contactusername{
-    @apply text-black text-xl font-medium
+.profileStatSubTitle2{
+    @apply text-2xl text-slate-800 font-medium
+}
+.profileProgresLineBlock {
+    position: relative;
+}
+
+.profileProgresLineBlock img {
+    position: absolute;
+    right: -10px; 
+    bottom: -10px; 
+}
+
+.profileMetrikaTitle{
+    @apply flex justify-center text-3xl font-medium mb-20
 }
 .profileOtherBlock{
-    @apply flex items-center px-5 pb-10
+    @apply flex items-center
 }
 .informationIcon{
-    margin-right: 10px;
+    @apply mr-2
 }
 // ---------PROFILE PAGE END-------------
 
@@ -395,3 +408,11 @@
 .formSubmitBtn{
     @apply text-white bg-green-600 px-8 pt-2 pb-3 rounded-2xl
 }
+
+// -------diagramaComponenntBlock---------
+.diagramaComponenntBlock{
+    @apply flex justify-center
+}
+
+// -------diagramaComponenntBlock---------
+
