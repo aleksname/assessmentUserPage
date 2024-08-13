@@ -22,7 +22,7 @@ export default function Main() {
             <div className={styles.homeTitle}>Ready to learn?</div>
             <div className={styles.homeSubTitle}>Continue where you left off</div>
             <div className={styles.learnLinkBlock}>
-              <Link href="#" className={styles.linkBlock}>
+              <Link href="/excersise" className={styles.linkBlock}>
               <Image src={learnIcon1} alt={learnIcon1} className={styles.linkBlockImg} />
                 <div className={styles.linkExcersise}>Excersise</div>
               </Link>
@@ -32,7 +32,7 @@ export default function Main() {
               </Link>
             </div>
             <div className={styles.homeTitle}>Recommended</div>
-            <Link href='#' className={styles.recomendedBlock}>
+            <Link href='/recommended' className={styles.recomendedBlock}>
                 <Image src={RecomendedIcon} className={styles.recomendedIcon} alt={ RecomendedIcon} />
               <div className={styles.recomendedTitle}>Circle radius and diameter</div>
             </Link>

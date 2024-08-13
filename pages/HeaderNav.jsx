@@ -9,8 +9,6 @@ import Image from 'next/image';
 import Logo from '../public/logo/favicon.png';
 import Link from 'next/link';
 
-import homeIcon from '../public/headerIcon/homeIcon.svg' 
-
 export default function () {
   const [state, setState] = React.useState({
     right: false,
@@ -26,7 +24,7 @@ export default function () {
 
   const list = (anchor) => (
     <Box
-      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
+      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 240 }}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
@@ -45,10 +43,12 @@ export default function () {
         <div className="">
           <Link href={'/quiz'} className={styles.headerQuizLick}>QUIZ</Link>
         </div>
+         <div className="">
+          <Link href={'/recommended'} className={styles.headerQuizLick}>RECOMMENDED</Link>
+        </div>
         <div className="">
           <Link href={'/feedback'} className={styles.headerHelp}>Feedback form</Link>
         </div>
-        {/* <Link href={'/'} className={styles.}>QUIZ</Link> */}
       </List>
     </Box>
   );

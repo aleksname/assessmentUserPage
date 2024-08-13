@@ -3,7 +3,7 @@ import styles from './styles/style.module.scss'
 import headCoin from '../public/MainPage/Coin.png'
 import Image from 'next/image';
 import BackHandIcon from '@mui/icons-material/BackHand';
-import Usericon from '../public/MainPage/UserIcon.png'
+import Usericon from '../public/profile/profileIcon2.svg'
 import { Link } from '@mui/material';
 export default function LearnHeadBlock() {
     return (

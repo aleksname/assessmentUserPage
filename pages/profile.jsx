@@ -12,9 +12,19 @@ import { styled } from '@mui/material/styles';
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
 import TabsComponentProfile from './TabsComponentProfile';
 import Diagrama from './Diagrama';
+import profileRatingIcon from '../public/profile/profileRatingIcon.svg'
+
 
 
 export default function profile() {
+
+    // let now = new Date();
+    // console.log(now.getDay()) отримав день тижня цифрою.
+    // console.log(now.getMonth())
+    let now = new Date();
+    // console.log(now.toLocaleDateString('uk-UA', { day: 'numeric', month: 'long' }));
+
+   
 
     const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
         height: 15,
@@ -33,7 +43,8 @@ export default function profile() {
             <div className={styles.wrapper}>
                 <div className={styles.profilePageBlock}>
                     <div className={styles.profilePageTitleBlock}>
-                        <div className={styles.profileTitle}>August 10, Saturday</div>
+                        <div className={styles.profileTitle}>Today: {(now.toLocaleDateString('EN', { day: 'numeric', month: 'long' }))}</div>
+                        <Image src={profileRatingIcon} alt='profileRatingIcon' className={styles.profileRatingIcon} />
                     </div>
                     <div className={styles.profileStatsinfo}>
                         <Image src={profileIcon2} alt='profileIcon2' className={styles.profileIcon} />
