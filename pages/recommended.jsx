@@ -15,7 +15,7 @@ export default function recommended() {
       <div className={styles.wrapperRecomendedPage}>
         <div className={styles.recomendedPageBlock}>
           <div className={styles.recommendedLinkBlock}>
-            <Link href="#" className={styles.recommendedLink}>
+            <Link href="/recommendedCircle" className={styles.recommendedLink}>
               <Image src={CircleIcon} alt='CircleIcon'/>
               <div className={styles.circleIconTitle}>Circle</div>  
             </Link>

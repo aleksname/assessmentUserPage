@@ -15,7 +15,7 @@
 }
 
 .headerTitle {
-  @apply mr-2;
+  @apply mr-2 font-medium;
 }
 
 .burgerButton {
@@ -465,4 +465,12 @@
 
 .circleIconTitle{
     @apply text-3xl  font-mono ml-4 text-white
+}
+
+// ----------wrapperRecomendedPage-----
+.recomendedCircle{
+    @apply flex justify-center
+}
+.recomendedCircleIcon{
+    @apply w-2/6
 }
