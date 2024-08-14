@@ -11,21 +11,21 @@ import CanvasIcon from '../public/RecomendedPage/CanvasIcon.svg'
 export default function recommended() {
 
   return (
-    <MainContainer>
+    <MainContainer titels={'Recomended page'}>
       <div className={styles.wrapperRecomendedPage}>
         <div className={styles.recomendedPageBlock}>
           <div className={styles.recommendedLinkBlock}>
-            <Link href="#" className={styles.recommendedLink}>
+            <Link href="/recommendedCircle" className={styles.recommendedLink}>
               <Image src={CircleIcon} alt='CircleIcon'/>
               <div className={styles.circleIconTitle}>Circle</div>  
             </Link>
 
-            <Link href="#" className={styles.recommendedLink}>
+            <Link href="/recommendedRadius" className={styles.recommendedLink}>
               <Image src={RadiusIcon} alt='RadiusIcon'/>
               <div className={styles.circleIconTitle}>Radius</div>  
             </Link>
 
-            <Link href="#" className={styles.recommendedLink}>
+            <Link href="/recommendedDiameter" className={styles.recommendedLink}>
               <Image src={Diametericon} alt='Diametericon'/>
               <div className={styles.circleIconTitle}>Diameter</div>  
             </Link>
