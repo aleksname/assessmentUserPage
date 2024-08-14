@@ -468,9 +468,51 @@
 }
 
 // ----------wrapperRecomendedPage-----
+
 .recomendedCircle{
-    @apply flex justify-center
+    @apply  mt-10 text-4xl font-mono
 }
-.recomendedCircleIcon{
-    @apply w-2/6
+.recomendedCircleTitleBlock,
+.recomendedCircleButtonBlock{
+    @apply flex justify-center mb-10 
+}
+.recomendedCircleTitle{
+    @apply text-7xl font-bold mb-10;
+    background-color: rgba(255, 255, 255, 0.393);
+}
+.circleTitle{
+    @apply my-10 text-5xl font-bold;
+    background-color: rgba(255, 255, 255, 0.393);
+}
+.recomendedCircleBlock{
+    @apply  flex justify-around
+}
+.recomendedCircleButtonBlock{
+    @apply items-center flex justify-center;
+}
+.recomendedCircleButton {
+    border: solid 10px rgba(137, 43, 226, 0.496);
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;    
+}
+
+.recomendedCircleSubTitleBlock{
+    margin-bottom: 20px;
+}
+.recomendedCircleSubTitle{
+    background-color: rgba(255, 255, 255, 0.393);
+}
+.recomendedCircleButtonSquare {
+  border: solid 10px rgba(137, 43, 226, 0.496);
+  border-radius: 0; 
+  width: 300px;
+  height: 300px;
+}
+
+.recomendedCircleButtonRectangle {
+  border: solid 10px rgba(137, 43, 226, 0.496);
+  border-radius: 10px; 
+  width: 400px; 
+  height: 200px; 
 }
