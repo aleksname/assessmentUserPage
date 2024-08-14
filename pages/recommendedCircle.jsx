@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './styles/style.module.scss'
 import RecomendedContainer from './RecomendedContainer'
-import RecomendedCircleBlock from './recomendedCircleBlock'
+import RecomendedCircleBlock from './RecomendedCircleBlock'
 
 export default function recommendedCircle() {
    
