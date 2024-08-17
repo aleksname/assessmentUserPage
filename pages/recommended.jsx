@@ -30,7 +30,7 @@ export default function recommended() {
               <div className={styles.circleIconTitle}>Diameter</div>  
             </Link>
 
-            <Link href="#" className={styles.recommendedLink}>
+            <Link href="/recommendedCanvas" className={styles.recommendedLink}>
               <Image src={CanvasIcon} alt='Diametericon'/>
               <div className={styles.circleIconTitle}>Canvas</div>  
             </Link>

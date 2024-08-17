@@ -516,3 +516,64 @@
   width: 400px; 
   height: 200px; 
 }
+
+// ------recomended radius------
+.radiusBlockElement{
+    @apply flex justify-around
+}
+.recomendedCircleParagrah{
+    @apply mb-2
+}
+.radiusElement{
+    width: 200px;
+    background: #fff;
+    border-radius: 50%;
+}
+.circle {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+}
+
+.circle::before {
+  content: "";
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4px; 
+  height: 100px;
+  background-color: #000;
+}
+
+.circle2 {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+}
+
+.circle2::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4px; 
+  height: 200px;
+  background-color: #000;
+}
+// --------canvas----------
+.canvasBlock{
+    @apply flex justify-center px-2 
+}
+.canvas{
+    @apply bg-slate-100 w-full;
+    height: 700px;
+    border: solid 30px ;
+    border-color: rgb(49,70,214);
+}
+
