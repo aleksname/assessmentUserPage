@@ -299,81 +299,28 @@
     max-width: 1230px;
     @apply mx-auto mt-5 px-5 
 }
-.testPageTitleBlock{
-    @apply flex justify-center 
+.quizeTestLink{
+    top: 50%;
+    left: 45%;
+    @apply absolute bg-blue-300 px-10 py-2 rounded-lg
 }
-.testQuestionTitle{
-    @apply flex justify-center text-2xl font-medium rounded-md py-2 mt-4;
-    background-color: #5858c3;
-}
-.testQuestion{
-    @apply flex justify-center my-10
-}
-.testQuestionImg{
-    background-color: #5858c371;
-    padding: 50px 40px;
-    border-radius: 15px;
-    width: 620px;
-}
-.testTitleEl{
-    @apply bg-slate-200 mr-10 px-4 py-2 text-xl;
-    border: solid #FFD18B;
-    border-radius: 50%;
- }
 
- .active{
-    background: #fff;
-    border: solid #FFD18B;
- }
- .unactive{
-    background: #cecece;
-    border: solid #cabead;
- }
- .correct{
-    background-color: greenyellow;
- }
- .wrong{
-    background-color: #c52675;
- }
-.quizTestBtnBlocks{
-    @apply flex justify-center
+@media (max-width: 620px) {
+    .quizeTestLink{
+    top: 50%;
+    left: 37%;
 }
- .quizTestBtnBlock{
-    grid-template-columns: repeat(2, 2fr);
-    @apply grid  
 }
- .quizTestBtn1,
- .quizTestBtn2,
- .quizTestBtn3,
- .quizTestBtn4{
-    width: 300px;
-    @apply flex justify-around bg-slate-200 m-2 py-7  rounded-xl;
-    border: none;
+@media (max-width: 420px) {
+    .quizeTestLink{
+    top: 50%;
+    left: 34%;
 }
-.quizTestBtn1:hover,
-.quizTestBtn2:hover,
-.quizTestBtn3:hover,
-.quizTestBtn4:hover{
-    transition: 0.4s;
-    background-color: goldenrod;
 }
- .quizTestBtn1{
-    background-color: greenyellow;
- }
- .quizTestBtn2{
-    background-color: #c52675;
- }
- .quizTestBtn3{
-    background-color: #5858c3;
- }
- .quizTestBtn4{
-    background-color: #FFD18B;
- }
- 
-
 // ----------feedbackPageBlock--------
 .wrapperFeedback{
     background-size: 100%;
+   
     background: rgb(82,181,124);
     background: radial-gradient(circle, rgba(82,181,124,1) 0%, rgba(38,147,111,1) 53%, rgba(107,170,123,1) 100%);
     padding: 80px 0;
@@ -516,3 +463,64 @@
   width: 400px; 
   height: 200px; 
 }
+
+// ------recomended radius------
+.radiusBlockElement{
+    @apply flex justify-around
+}
+.recomendedCircleParagrah{
+    @apply mb-2
+}
+.radiusElement{
+    width: 200px;
+    background: #fff;
+    border-radius: 50%;
+}
+.circle {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+}
+
+.circle::before {
+  content: "";
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4px; 
+  height: 100px;
+  background-color: #000;
+}
+
+.circle2 {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+}
+
+.circle2::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4px; 
+  height: 200px;
+  background-color: #000;
+}
+// --------canvas----------
+.canvasBlock{
+    @apply flex justify-center px-2 
+}
+.canvas{
+    @apply bg-slate-100 w-full;
+    height: 700px;
+    border: solid 30px ;
+    border-color: rgb(49,70,214);
+}
+
