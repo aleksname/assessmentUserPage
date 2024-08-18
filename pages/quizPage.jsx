@@ -17,27 +17,7 @@ export default function quizPage() {
         <MainContainer titels={'Quiz page'}>
         <div className={styles.wrapper}>
             <div className={styles.quizeTestPageBlock}>
-                <div className={styles.testPageTitleBlock}>
-                    <div className={`${styles.testTitleEl} ${correct === 1 ? styles.active : styles.unactive} `}>1</div>
-                    <div className={`${styles.testTitleEl} ${correct === 1 ? styles.active : styles.unactive} `}>2</div>
-                    <div className={`${styles.testTitleEl} ${correct === 1 ? styles.active : styles.unactive} `}>3</div>
-                    <div className={`${styles.testTitleEl} ${correct === 1 ? styles.active : styles.unactive} `}>4</div>
-                    <div className={`${styles.testTitleEl} ${correct === 1 ? styles.active : styles.unactive} `}>5</div>
-                    </div>
-                    
-                        <div className={styles.testQuestionTitle}>У  ряду назви двох наступних тваринок.</div>
-                    <div className={styles.testQuestion}>
-                        <Image src={ChildrenIcon} alt='test Question Icon' className={styles.testQuestionImg} />
-                    <div className={styles.childrenIconTitle}></div>    
-                </div>   
-                <div className={styles.quizTestBtnBlocks}>
-                    <div className={styles.quizTestBtnBlock}>
-                        <button onClick={() => handleClick(1)} className={styles.quizTestBtn1}>1</button>
-                        <button onClick={() => handleClick(2)} className={styles.quizTestBtn2}>2</button>
-                        <button onClick={() => handleClick(3)} className={styles.quizTestBtn3}>3</button>
-                        <button onClick={() => handleClick(4)} className={styles.quizTestBtn4}>4</button>
-                    </div>   
-                </div>    
+                <a href="https://kahoot.it/?pin=741479&refer_method=link" className={styles.quizeTestLink}>Тиць тут</a>
             </div>
         </div>
     </MainContainer>
