@@ -30,7 +30,7 @@ export default function LearnHeadBlock() {
           <div className={styles.headCoinTitle}>10</div>
         </div>
         <div className={styles.headUserNameBlock}>
-          <div className="">
+          <div className={styles.headUserInfo}>
             <div className={styles.headUserName}>
               <BackHandIcon style={{ color: 'yellow' }} className={styles.headUserNameImg} />
               <pre className="">HI, </pre>        
