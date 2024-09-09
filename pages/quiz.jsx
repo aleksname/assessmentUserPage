@@ -57,7 +57,7 @@ export default function quiz() {
           </div>
           <div className={ styles.quizFooterBlock}>
             <Image src={dogIcon} alt="Dog Image" />
-            <Link href="/quizPage" className={styles.footerBlock}>
+            <Link href={ '#'} className={styles.footerBlock}>
               <div className={styles.quizFooterLinkBlock}>
                 <div className={styles.quizFooterLink}>&#10230;</div>
               </div>
