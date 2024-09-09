@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { app } from "../firebase";
-import Auth from "./auth";
 import MainContainer from "./MainContainer";
 import styles from './styles/style.module.scss';
 import MainPageTop from '../public/MainPage/MainPageTop.png';
