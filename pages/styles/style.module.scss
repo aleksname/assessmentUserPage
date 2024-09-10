@@ -5,6 +5,8 @@
   @apply mx-auto p-5 text-xl text-slate-800;
 }
 
+
+
 .headerBlockNav {
   max-width: 1280px;
   @apply flex justify-between;
@@ -70,8 +72,8 @@
     height: auto;
 }
 .homePageBlock{
-    max-width: 1230px;
-    @apply px-5 mx-auto
+    max-width: 1200px;
+    @apply   mx-auto
 }
 .homePageImg{
     @apply flex justify-center;
@@ -98,7 +100,7 @@
 }   
 
 .headUserNameBlock{
-    @apply text-2xl font-bold flex
+    @apply text-2xl font-bold flex items-center
 }
 .headUserName{
     @apply flex
@@ -124,6 +126,7 @@
     color: #00000098;
     @apply text-xl mb-12
 }
+
 
 // 
 .learnLinkBlock {
@@ -524,3 +527,66 @@
     border-color: rgb(49,70,214);
 }
 
+// ------adaptation------
+@media (max-width: 670px) {
+    .headUserName,
+    .profileStatTitle,
+    .profileStatSubTitle2,
+    .profileMetrikaTitle{
+        @apply text-xl
+    }
+    .profileMetrikaTitle{
+        @apply mt-3
+    }
+    .userSubTitle,
+    .profileTitle{
+        @apply text-base
+    }
+    .profileStatSubTitle,
+    .profileStatSubTitle{
+        @apply text-lg
+    }
+    .profileRatingIcon{
+        width: 60px;
+    }
+}
+@media (max-width: 550px) {
+    .headUserName{
+        font-size: 19px;
+        line-height: 1.5rem /* 24px */
+    }
+    .userSubTitle{
+        font-size: 16px;
+        line-height: 1.5rem /* 24px */
+    }
+    .homeTitle{
+    @apply text-2xl font-medium mb-2;
+    }
+    .homeSubTitle{
+    @apply text-black mb-12 text-base;
+    }
+    .headCoinBlock{
+        @apply text-base;
+    }
+}
+@media (max-width: 500px) {
+
+.linkExcersise,
+.recomendedTitle{
+    @apply text-xl;
+}
+}
+
+@media (max-width: 350px) {
+    .recomendedTitle{
+    @apply text-lg;
+}
+.recomendedTitle{
+    @apply text-base;
+}
+.linkExcersise {
+    @apply absolute bottom-2 right-2  text-gray-500 rounded-2xl  ;
+    background-color: #ffd18bd1;
+    padding: 3px;
+}
+}
