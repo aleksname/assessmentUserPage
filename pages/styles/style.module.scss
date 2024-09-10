@@ -529,11 +529,25 @@
 
 // ------adaptation------
 @media (max-width: 670px) {
-    .headUserName{
+    .headUserName,
+    .profileStatTitle,
+    .profileStatSubTitle2,
+    .profileMetrikaTitle{
         @apply text-xl
     }
-    .userSubTitle{
+    .profileMetrikaTitle{
+        @apply mt-3
+    }
+    .userSubTitle,
+    .profileTitle{
         @apply text-base
+    }
+    .profileStatSubTitle,
+    .profileStatSubTitle{
+        @apply text-lg
+    }
+    .profileRatingIcon{
+        width: 60px;
     }
 }
 @media (max-width: 550px) {
@@ -562,20 +576,7 @@
     @apply text-xl;
 }
 }
-@media (max-width: 400px) {
-    .learnHeadBlock{
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-    }
-    .headCoinTitle{
-        @apply mb-2
-    }
-    .headUserNameBlock{
-        @apply flex justify-between 
-    }
-   
-}
+
 @media (max-width: 350px) {
     .recomendedTitle{
     @apply text-lg;

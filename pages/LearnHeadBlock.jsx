@@ -25,10 +25,11 @@ export default function LearnHeadBlock() {
   return (
     <>
       <div className={styles.learnHeadBlock}>
-        <div className={styles.headCoinBlock}>
+        {/* <div className={styles.headCoinBlock}>
           <Image src={headCoin} alt={headCoin} className={styles.headCoin} />
           <div className={styles.headCoinTitle}>10</div>
-        </div>
+        </div> */}
+        <div className=""></div>
         <div className={styles.headUserNameBlock}>
           <div className={styles.headUserInfo}>
             <div className={styles.headUserName}>
