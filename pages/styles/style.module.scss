@@ -579,8 +579,11 @@
 
 @media (max-width: 350px) {
     .recomendedTitle{
-    @apply text-lg;
-}
+    @apply text-lg ;
+    }
+    .userTitle{
+        @apply text-basey
+    }
 .recomendedTitle{
     @apply text-base;
 }

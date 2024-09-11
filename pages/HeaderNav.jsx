@@ -8,11 +8,14 @@ import styles from './styles/style.module.scss';
 import Image from 'next/image';
 import Logo from '../public/logo/favicon.png';
 import Link from 'next/link';
+import { getAuth, signOut } from 'firebase/auth';
+import { useRouter } from 'next/router';
 
-export default function () {
+export default function Header() {
   const [state, setState] = React.useState({
     right: false,
   });
+
 
   const toggleDrawer = (anchor, open) => (event) => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
@@ -21,6 +24,7 @@ export default function () {
 
     setState({ ...state, [anchor]: open });
   };
+
 
   const list = (anchor) => (
     <Box
@@ -43,12 +47,13 @@ export default function () {
         <div className="">
           <Link href={'/quiz'} className={styles.headerQuizLick}>QUIZ</Link>
         </div>
-         <div className="">
+        <div className="">
           <Link href={'/recommended'} className={styles.headerQuizLick}>RECOMMENDED</Link>
         </div>
         <div className="">
           <Link href={'/feedback'} className={styles.headerHelp}>Feedback form</Link>
         </div>
+        
       </List>
     </Box>
   );

@@ -1,7 +1,3 @@
-import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
-import { app } from "../firebase";
 import MainContainer from "./MainContainer";
 import styles from './styles/style.module.scss';
 import MainPageTop from '../public/MainPage/MainPageTop.png';
@@ -13,26 +9,8 @@ import Link from "next/link";
 import RecomendedIcon from '../public/MainPage/recomendedIcon.png';
 
 export default function Main() {
-  const [user, setUser] = useState(null); // Зберігаємо користувача в стані
-  const router = useRouter();
-  const auth = getAuth(app);
+  
 
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (maybeUser) => {
-      if (maybeUser) {
-        setUser(maybeUser); // Якщо користувач залогінений, зберігаємо його дані
-      } else {
-        router.push("/auth"); // Якщо користувач не залогінений, перенаправляємо на сторінку авторизації
-      }
-    });
-
-    return () => unsubscribe(); // Чистка підписки
-  }, [auth, router]);
-
-  // Показуємо "Loading...", поки чекаємо дані про користувача
-  if (user === null) {
-    return <>Loading...</>;
-  }
 
   return (
     <>
