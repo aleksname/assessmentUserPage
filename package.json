@@ -18,11 +18,16 @@
     "@mui/material": "^5.16.6",
     "@mui/styled-engine-sc": "^6.0.0-alpha.18",
     "@mui/x-charts": "^7.12.1",
+    "@types/pg": "^8.11.9",
     "autoprefixer": "^10.4.20",
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.3",
     "dotenv": "^16.4.5",
-    "firebase": "^10.13.1",
-    "firebase-auth": "^0.1.2",
+    "express": "^4.21.0",
+    "jsonwebtoken": "^9.0.2",
     "next": "^14.2.5",
+    "pg": "^8.12.0",
     "postcss": "^8.4.40",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -31,6 +36,8 @@
     "styled-components": "^6.1.12"
   },
   "devDependencies": {
-    "tailwindcss": "^3.4.7"
+    "tailwindcss": "^3.4.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2"
   }
 }

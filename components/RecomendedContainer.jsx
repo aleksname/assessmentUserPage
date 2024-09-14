@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import styles from './styles/style.module.scss'
-import HeaderNavRecomendedElement from './HeaderNavRecomendedElement'
+import styles from '../pages/styles/style.module.scss'
+import HeaderNavRecomendedElement from '../components/HeaderNavRecomendedElement'
 
 export default function RecomendedContainer({ children, keywords, titels }) {
   return (

@@ -1,7 +1,7 @@
 import React  from 'react';
-import styles from './styles/style.module.scss';
+import styles from '../pages/styles/style.module.scss';
 import Image from 'next/image';
-import BackHandIcon from '@mui/icons-material/BackHand';
+// import BackHandIcon from '@mui/icons-material/BackHand';
 import Usericon from '../public/profile/profileIcon2.svg';
 import { Link } from '@mui/material';
 
