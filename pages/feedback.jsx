@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import styles from './styles/style.module.scss'
+import styles from '../pages/styles/style.module.scss';
 import Link from 'next/link'
 
 export default function feedback() {

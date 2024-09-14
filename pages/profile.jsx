@@ -1,6 +1,7 @@
 import * as React from 'react';
-import MainContainer from './MainContainer'
-import styles from './styles/style.module.scss'
+import MainContainer from '../components/MainContainer'
+import styles from '../pages/styles/style.module.scss';
+
 import Image  from 'next/image';
 import InformationIcon from '../public/profile/informationIcon.svg'
 import Link from 'next/link';
@@ -9,9 +10,10 @@ import profileIcon2 from '../public/profile/profileIcon2.svg'
 import ChestIcon from '../public/profile/ChestIcon.svg'
 
 import { styled } from '@mui/material/styles';
+
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
-import TabsComponentProfile from './TabsComponentProfile';
-import Diagrama from './Diagrama';
+import TabsComponentProfile from '../components/TabsComponentProfile';
+import Diagrama from '../components/Diagrama';
 import profileRatingIcon from '../public/profile/profileRatingIcon.svg'
 
 
@@ -23,8 +25,6 @@ export default function profile() {
     // console.log(now.getMonth())
     let now = new Date();
     // console.log(now.toLocaleDateString('uk-UA', { day: 'numeric', month: 'long' }));
-
-   
 
     const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
         height: 15,

@@ -4,7 +4,7 @@ import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
 import List from '@mui/material/List';
 import MenuIcon from '@mui/icons-material/Menu';
-import styles from './styles/style.module.scss';
+import styles from '../pages/styles/style.module.scss';
 import Image from 'next/image';
 import Logo from '../public/RecomendedPage/GoBack.svg';
 import Link from 'next/link';

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import MainContainer from './MainContainer';
+import MainContainer from '../components/MainContainer'
 
 export default function Excersise() {
   const [randomNumber1, setRandomNumber1] = useState(0);
