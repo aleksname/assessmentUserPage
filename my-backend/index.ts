@@ -1,35 +1,31 @@
+const express = require('express');
+const { Pool } = require('pg');
+import { NextApiRequest, NextApiResponse } from 'next';
 
-import { Client } from 'pg';
-
-const client = new Client({
-  user: 'postgres', 
-  host: 'localhost',
-  database: 'assessment_db', 
-  password: '1234', 
-  port: 5432,
+const app = express();
+const pool = new Pool({
+    user: 'postgres', 
+    host: 'localhost',
+    database: 'assessment_db', 
+    password: '1234', 
+    port: 5432,
 });
 
-async function fetchUsers() {
-  try {
-    await client.connect();
-    console.log('Connected to the database');
+app.use(express.json());
 
-    console.log('Executing query...');
-    const res = await client.query('SELECT * FROM users');
-    console.log('Users:', res.rows);
-
-  } catch (err) {
-    if (err instanceof Error) {
-      console.error('Error executing query', err.stack);
-    } else {
-      console.error('Unknown error', err);
+app.post('/api/save-user', async (req: NextApiRequest, res: NextApiResponse) => {
+    const { auth0_user_id, email, name, avatar_url } = req.body;
+    try {
+        await pool.query(
+            'INSERT INTO users (auth0_user_id, email, name, avatar_url) VALUES ($1, $2, $3, $4) ON CONFLICT (auth0_user_id) DO NOTHING',
+            [auth0_user_id, email, name, avatar_url]
+        );
+        res.status(200).send('User saved successfully');
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Error saving user');
     }
-  } finally {
-    await client.end();
-    console.log('Client disconnected');
-  }
-}
+});
 
-
-// Виклик функції для перевірки
-fetchUsers();
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

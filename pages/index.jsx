@@ -8,15 +8,22 @@ import learnIcon2 from '../public/MainPage/QuizIcon.png';
 import Link from "next/link";
 import RecomendedIcon from '../public/MainPage/recomendedIcon.png';
 
-export default function Main() {
-  
+import { useAuth0 } from "@auth0/auth0-react";
 
+export default function Main() {
+
+  const { user, isAuthenticated, isLoading } = useAuth0();
+
+  if (isLoading) {
+    return <div>Loading ...</div>;
+  }
 
   return (
     <>
       <MainContainer titels={"Home Page"}>
         <div className={styles.wrapper}>
           <div className={styles.homePageBlock}>
+            {/* <h2>{user.name}</h2> */}
             <div className={styles.homePageImg}>
               <Image src={MainPageTop} alt="Main Page Top Image" className={styles.pageImg} />
             </div>
@@ -27,7 +34,7 @@ export default function Main() {
               <div className={styles.learnLinkBlock}>
                 <Link href="/excersise" className={styles.linkBlock}>
                   <Image src={learnIcon1} alt={learnIcon1} className={styles.linkBlockImg} />
-                  <div className={styles.linkExcersise}>Excersise</div>
+                  <div className={styles.linkExcersise}>Homework</div>
                 </Link>
                 <Link href="/quiz" className={styles.linkBlock}>
                   <Image src={learnIcon2} alt={learnIcon1} className={styles.linkBlockImg} />

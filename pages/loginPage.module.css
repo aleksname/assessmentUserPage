@@ -1,0 +1,49 @@
+    .wrapper{
+    background-image: url('../public/MainPage/bgMainPage.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: auto;
+}
+.homePageBlock{
+    max-width: 1200px;
+    @apply   mx-auto 
+}
+.homePageImg{
+    @apply flex justify-center;
+}
+.pageImg{
+    background-repeat: no-repeat;
+    background-position: center;
+    @apply   px-10
+}
+.homePageLearnBlock{
+    background-color: #FFD18B;
+    @apply p-5  rounded-xl shadow-2xl  
+}
+.title{
+    @apply  text-4xl flex justify-center font-medium mb-10
+}
+.inputContainer{
+    @apply text-lg  mb-10
+}
+.inputEl{
+    @apply mb-12 flex justify-center
+}
+.input {
+  outline: none; 
+  border: 2px solid transparent; 
+  padding: 8px;
+  border-radius: 20px;
+  transition: border-color 0.3s ease; 
+}
+.input:focus {
+  border-color: #007BFF; 
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+
+}
+.submitBlock{
+    @apply flex justify-center 
+}
+.submit{
+    @apply bg-green-400 py-3 px-12 rounded-2xl mt-10 mb-4 
+}
