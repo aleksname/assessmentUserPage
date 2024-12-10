@@ -25,7 +25,7 @@ export default function LoginPage() {
       if (response.ok) {
         const data = await response.json();
         console.log('Login successful:', data);
-        router.push('/'); // Перенаправлення
+        router.push('/home'); 
       } else {
         const errorData = await response.json();
         alert(errorData.message);

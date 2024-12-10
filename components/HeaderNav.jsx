@@ -63,7 +63,7 @@ export default function Header() {
   return (
     <>
       <div className={styles.headerBlockNav}>
-        <Link href='/' className={styles.header}>
+        <Link href='/home' className={styles.header}>
           <h1 className={styles.headerTitle}>ReflexEd</h1>
           <Image src={Logo} alt={Logo} className={styles.headerLogoImg} />
         </Link>

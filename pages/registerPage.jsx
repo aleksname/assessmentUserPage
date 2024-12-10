@@ -39,7 +39,7 @@ export default function RegisterPage() {
       if (response.ok) {
         alert('User registered successfully!');
         setFormData({ name: '', email: '', password: '', confirmPassword: '' });
-        router.push('/loginPage'); // Перенаправлення на сторінку логіну
+        router.push('/loginPage'); 
       } else {
         alert('Failed to register user.');
       }

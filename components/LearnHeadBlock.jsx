@@ -7,6 +7,25 @@ import { Link } from '@mui/material';
 
 
 export default function LearnHeadBlock() {
+  const [user, setUser] = useState();
+
+  // useEffect(() => {
+  //   fetch('/api/getUsers')
+  //     .then(data =>setUser(data))
+  // })
+
+ useEffect(() => {
+  fetch('/api/getUsers')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`error: ${response.status}`);
+      }
+      return response.json(); 
+    })
+    .then(data => setUser(data)) 
+    .catch(err => console.error('error:', err));
+}, []);
+
 
   return (
     <div className={styles.learnHeadBlock}>
@@ -15,8 +34,10 @@ export default function LearnHeadBlock() {
         <div className={styles.headUserInfo}>
           <div className={styles.headUserName}>
             <pre className="">HI, </pre>
-            <div className={styles.userTitle}>name 
+            <div className={styles.userTitle}>
+              {user ? user.name : 'Loading...'}
             </div>
+
           </div>
         </div>
         <Link href="/profile" className="">

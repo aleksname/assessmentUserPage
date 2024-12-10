@@ -631,3 +631,29 @@
 }
 }
 
+/* ---------------- */
+.authHomeTitle{
+    @apply flex justify-center text-4xl font-medium mb-5
+}
+.authBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.authLink {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #0070f3;
+  cursor: pointer;
+}
+
+.authLink:hover {
+  text-decoration: underline;
+}
+
+.orText {
+  font-size: 1rem;
+  color: #666;
+}
