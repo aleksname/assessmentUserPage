@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import styles from '../pages/styles/style.module.scss';
 
-import HeaderNav from '../components/HeaderNav'
+import HeaderNav from './HeaderNav'
 
 export default function MainContainer({ children, keywords, titels }) {
   return (

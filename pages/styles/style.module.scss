@@ -216,7 +216,44 @@
 .informationIcon{
     @apply mr-2
 }
+.profileStatsBlock{
+    text-align: center;
+}
+
 // ---------PROFILE PAGE END-------------
+
+// --------------excersise page start---
+.excerciceContainer{
+    background-color: #FFD18B;
+    @apply p-5  rounded-xl shadow-2xl;
+}
+.excerciceTitle,
+.excerciceSubTitle{
+    display: flex;
+    justify-content: center;
+    font-size: 45px;
+    font-weight: 600;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+.excerciceSubTitle{
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 90px;
+}
+.excerciceTaskTitle{
+    padding: 20px 0;
+    font-size: 20px;
+}
+.excerciceTaskTitleSpan{
+    background-color: yellow;
+    padding: 3px 5px;
+    font-weight: 500;
+}
+.excerciceHomeWorkBlock{
+}
+// --------------excersise page end---
+
 
 
 // ------------- QUIZ - PAGE START---------
@@ -592,4 +629,31 @@
     background-color: #ffd18bd1;
     padding: 3px;
 }
+}
+
+/* ---------------- */
+.authHomeTitle{
+    @apply flex justify-center text-4xl font-medium mb-5
+}
+.authBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.authLink {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #0070f3;
+  cursor: pointer;
+}
+
+.authLink:hover {
+  text-decoration: underline;
+}
+
+.orText {
+  font-size: 1rem;
+  color: #666;
 }

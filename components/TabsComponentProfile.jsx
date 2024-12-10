@@ -1,12 +1,13 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
-import Diagrama from './Diagrama';
+import { stepData } from '../stepData'; 
 
+import styles from '../pages/styles/style.module.scss'
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -41,17 +42,18 @@ function a11yProps(index) {
 }
 
 export default function TabsComponentProfile() {
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
   return (
+    <div className="">
     <Box
       sx={{
         display: 'flex',
-        flexDirection: 'column', 
+        flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
       }}
@@ -64,20 +66,19 @@ export default function TabsComponentProfile() {
         aria-label="Horizontal tabs example"
         sx={{ borderBottom: 1, borderColor: 'divider' }}
       >
-        <Tab label="Daily" {...a11yProps(0)} />
-        <Tab label="Monthly" {...a11yProps(1)} />
-        <Tab label="Yearly" {...a11yProps(2)} />
+        {stepData.map((step, index) => (
+          <Tab key={index} label={step.label} {...a11yProps(index)} />
+        ))}
       </Tabs>
-      <TabPanel value={value} index={0}>
-        Daily Stat
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        Monthly Stat
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        Yearly Stat
-      </TabPanel>
-      
+      {stepData.map((step, index) => (
+        <div className={styles.profileStatsBlock}>
+        <TabPanel key={index} value={value} index={index} className={styles.profileStats}>
+          {step.content} stars 😼
+          </TabPanel>
+        </div>
+      ))}
     </Box>
+      {/* <div className="">s</div> */}
+    </div>
   );
 }
