@@ -257,13 +257,15 @@
 
 
 // ------------- QUIZ - PAGE START---------
-.topImage{
-    max-width: 1190px;
-    @apply mx-auto px-10
+.topImageContainer{
+    display: flex;
+    justify-content: center;
 }
 .quizPageBlock{
     max-width: 1190px;
-    @apply mx-auto px-5 mb-5 bg-blue-200 rounded-xl shadow-xl;
+    margin: 0 auto;
+
+    @apply  px-5 mb-5 bg-blue-200 rounded-xl shadow-xl;
 }
 .quizTitleBlock{
     @apply text-3xl font-medium   items-center border-b-4 py-3
@@ -281,6 +283,12 @@
     width: 220px;
     height: 150px
 }
+@media (max-width: 850px){
+    .pageSubtitleIcon{
+        width: 150px;
+        height: 100px;
+    }
+}
 .quizFooterBlock{
     @apply flex items-center justify-between flex;
 }
@@ -292,6 +300,14 @@
   border-radius: 50%;
   color: antiquewhite;
   animation: pulse 2s infinite;
+}
+@media (max-width: 500px){
+    .quizFooterLinkBlock{
+        @apply text-3xl py-2 pb-3
+    }
+    .dogIcon{
+        width: 100px;
+    }  
 }
 
 @keyframes pulse {
@@ -318,6 +334,17 @@
   -webkit-text-fill-color: transparent;
 }
 
+@media (max-width: 850px){
+    .quizPageContentBlock{
+        font-size: 50px;
+    }
+}
+@media (max-width: 500px){
+    .quizPageContentBlock{
+        font-size: 40px;
+    }
+}
+
 
 .quizPageContentBlock span {
   text-shadow: 
@@ -334,15 +361,27 @@
     font-size: 95px;
     line-height: 1;
 }
+@media (max-width: 850px){
+    .quizContentSubTitle{
+        font-size: 55px;
+    }
+    .quizContentSubTitle2{
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 500px){
+    .quizContentSubTitle{
+        font-size: 40px;
+    }
+    .quizContentSubTitle2{
+        font-size: 45px;
+    }
+}
 // ---------quizeTestPageBlock---------
 .quizeTestPageBlock{
     max-width: 1230px;
     @apply mx-auto mt-5 px-5 
-}
-.quizeTestLink{
-    top: 50%;
-    left: 45%;
-    @apply absolute bg-blue-300 px-10 py-2 rounded-lg
 }
 
 @media (max-width: 620px) {

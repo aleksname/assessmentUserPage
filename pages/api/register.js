@@ -1,11 +1,11 @@
 import { Pool } from 'pg';
 
 const pool = new Pool({
-    user: 'postgres', 
-    host: 'localhost',
-    database: 'assessment_db', 
-    password: '1234', 
-    port: 5432,
+  user: 'postgres',
+  host: 'localhost',
+  database: 'assessment_db',
+  password: '1234',
+  port: 5432,
 });
 
 export default async function handler(req, res) {

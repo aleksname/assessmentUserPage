@@ -4,28 +4,28 @@ import Image from 'next/image';
 import Usericon from '../public/profile/profileIcon2.svg';
 import { Link } from '@mui/material';
 
-
-
 export default function LearnHeadBlock() {
-  const [user, setUser] = useState();
+  const [userName, setUserName] = useState('');
 
-  // useEffect(() => {
-  //   fetch('/api/getUsers')
-  //     .then(data =>setUser(data))
-  // })
-
- useEffect(() => {
-  fetch('/api/getUsers')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`error: ${response.status}`);
+  useEffect(() => {
+    const fetchUserName = async () => {
+      const userId = localStorage.getItem('userId'); // Отримуємо ID користувача з локального сховища
+      if (!userId) {
+        console.error('User ID not found in local storage');
+        return;
       }
-      return response.json(); 
-    })
-    .then(data => setUser(data)) 
-    .catch(err => console.error('error:', err));
-}, []);
 
+      try {
+        const response = await fetch(`/api/getUserById?id=${userId}`);
+        const data = await response.json();
+        setUserName(data.name);
+      } catch (error) {
+        console.error('Error fetching user name:', error);
+      }
+    };
+
+    fetchUserName();
+  }, []);
 
   return (
     <div className={styles.learnHeadBlock}>
@@ -33,11 +33,7 @@ export default function LearnHeadBlock() {
       <div className={styles.headUserNameBlock}>
         <div className={styles.headUserInfo}>
           <div className={styles.headUserName}>
-            <pre className="">HI, </pre>
-            <div className={styles.userTitle}>
-              {user ? user.name : 'Loading...'}
-            </div>
-
+            <pre>Hi👋  {userName}</pre>
           </div>
         </div>
         <Link href="/profile" className="">

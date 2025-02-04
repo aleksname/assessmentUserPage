@@ -25,6 +25,7 @@ export default function LoginPage() {
       if (response.ok) {
         const data = await response.json();
         console.log('Login successful:', data);
+        localStorage.setItem('userId', data.user.id); // Зберігаємо ID користувача в локальному сховищі
         router.push('/home'); 
       } else {
         const errorData = await response.json();

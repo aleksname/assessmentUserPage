@@ -8,17 +8,15 @@ const pool = new Pool({
     port: 5432,
 });
 
-// pool.query('SELECT name FROM users')
-//     .then(result => console.log(result.rows))
-//     .catch(err => console.log('err', err))
 const getUserById = (request, response) => {
-  const id = parseInt(request.params.id)
+  const id = parseInt(request.params.id);
 
-  pool.query('SELECT * FROM user WHERE id = $1', [id], (error, results) => {
+  pool.query('SELECT name FROM users WHERE id = $1', [id], (error, results) => {
     if (error) {
-      throw error
+      throw error;
     }
-    response.status(200).json(results.rows)
-  })
-}
-getUserById()
+    response.status(200).json(results.rows[0].name);
+  });
+};
+
+module.exports = getUserById;
