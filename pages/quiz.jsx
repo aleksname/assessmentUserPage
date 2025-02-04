@@ -10,7 +10,7 @@ import gifEyes from '../public/quiz/gifEyes.gif'
 
 export default function quiz() {
   return (
-    <MainContainer titels={'Quiz page'}>
+    <MainContainer titels={'Quiz page '}>
       <div className={styles.wrapper}>
         <Image src={topImage} alt='topImage' className={styles.topImage} />
         <div className={styles.quizPageBlock}>
@@ -57,7 +57,7 @@ export default function quiz() {
           </div>
           <div className={ styles.quizFooterBlock}>
             <Image src={dogIcon} alt="Dog Image" />
-            <Link href={ '#'} className={styles.footerBlock}>
+            <Link href={ '/'} className={styles.footerBlock}>
               <div className={styles.quizFooterLinkBlock}>
                 <div className={styles.quizFooterLink}>&#10230;</div>
               </div>
