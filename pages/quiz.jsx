@@ -10,7 +10,7 @@ import gifEyes from '../public/quiz/gifEyes.gif'
 
 export default function quiz() {
   return (
-    <MainContainer titels={'Quiz page'}>
+    <MainContainer titels={'Quiz page '}>
       <div className={styles.wrapper}>
         <div className={styles.topImageContainer}>
           <Image src={topImage} alt='topImage' className={styles.topImage} />
