@@ -16,6 +16,7 @@ import TabsComponentProfile from '../components/TabsComponentProfile';
 import Diagrama from '../components/Diagrama';
 
 import Popups from '../components/UI/popup/Popups/Popups';
+import ProfileProgress from '../components/ProfileProgress/ProfileProgress';
 export default function profile() {
 
     let now = new Date();
@@ -55,8 +56,9 @@ export default function profile() {
                     </div>
                     <div className={styles.profileStatSubTitle}>8,312 steps done</div>
                     <div className={styles.profileMetrikaTitle}>Your Steps Progress</div>
-                    <TabsComponentProfile />
-                    <Diagrama/>
+                    {/* <TabsComponentProfile /> */}
+                    {/* <Diagrama/> */}
+                    <ProfileProgress/>
                     <Link href='/feedback'>
                     <div className={styles.profileOtherBlock}>
                         <Image src={InformationIcon} alt={"InformationIcon"} className={ styles.informationIcon} />

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Usericon from '../public/profile/profileIcon2.svg';
 import { Link } from '@mui/material';
 
-export default function LearnHeadBlock() {
+export default function wLearnHeadBlock() {
   const [userName, setUserName] = useState('');
 
   useEffect(() => {

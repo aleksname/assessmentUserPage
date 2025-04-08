@@ -1,0 +1,52 @@
+.profileProgressTableContainer{
+    /* border: 2px solid rgba(128, 128, 128, 0.378); */
+    /* border-radius: 8px; */
+    /* padding: 10px; */
+    margin-bottom: 10px;
+}
+.profileProgressTableTitle,
+.profileTableTitleInfoElement{
+    display: flex;
+    justify-content: space-between;
+}
+
+.table {
+  border-collapse: collapse;
+  /* border: 2px solid rgb(140 140 140); */
+  font-family: monospace;
+  font-size: 16px;
+  letter-spacing: 1px;
+  width: 100%;
+}
+.thead tr{
+    border-top: 2px solid rgb(140 140 140);
+}
+
+.thead .th,
+.tbody .th{
+    border-right : 2px solid rgb(140 140 140);
+}
+.thead .th:first-child,
+.tbody .th:first-child{
+    width: 30%;
+    text-align: left;
+}
+.thead .th:last-child,
+.tbody .th:last-child{
+    border: none;
+}
+.tbody{
+    border-top: 2px solid rgb(140 140 140);
+}
+.tbody tr{
+    border-bottom: 2px solid rgb(140 140 140);
+}
+
+.th,
+.td {
+  /* border: 1px solid rgb(160 160 160); */
+  padding: 8px 10px;
+}
+
+
+
