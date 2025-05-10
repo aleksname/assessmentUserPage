@@ -8,17 +8,7 @@ import learnIcon2 from '../public/MainPage/QuizIcon.png';
 import Link from "next/link";
 import RecomendedIcon from '../public/MainPage/recomendedIcon.png';
 
-import { useAuth0 } from "@auth0/auth0-react";
-
 export default function Main() {
-
-
-  
-  const { user, isAuthenticated, isLoading } = useAuth0();
-
-  if (isLoading) {
-    return <div>Loading ...</div>;
-  }
 
   return (
     <>
